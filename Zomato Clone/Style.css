@@ -1,0 +1,694 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: blue; */
+}
+nav{
+    height: 70px;
+    width: 100%;
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+    /* border: 1px solid black; */
+    position: absolute;
+    color: white;
+    
+}
+nav> ul{
+    height: 100%;
+    width: 75%;
+    /* background: red; */
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    /* color: black; */
+}
+nav>ul>li:first-child{
+    margin-right: auto;
+    font-size: 14px;
+    font-weight: 500;
+}
+nav > ul > li{
+    /* border: 2px solid black; */
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 300;
+}
+nav > ul a{
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 0;
+}
+
+/* ------------------backdropimage ------------------ */
+.backdropimage{
+    height: 60vh;
+    width: 100%;
+    border: 2px solid black;
+    background-image: url(https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    height: calc(60vh - 70px);
+    width: 100%;
+    /* background-color: red; */
+    position: absolute;
+    top: 70px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+.headline{
+    font-size: 90px;
+    font-weight: 900;
+    font-style: italic;
+    top: 0;
+}
+.description{
+    font-size: 40px;
+}
+.input-box{
+    height: 56px;
+    width: 60%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+}
+.input-box>.location{
+    height: 100%;
+    width: 40%;
+    /* background-color: aqua; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center; 
+    font-size: large;
+    padding-left: 10px;
+}
+.input-box>.location> p{
+    font-size: larger;
+}
+.input-box>.location> input{
+    height: 70%;
+    width: 100%;
+    outline:none ;
+    border: unset;
+}
+.input-box>.location> select{
+    border: unset;
+    outline: none;
+}
+/* .input-box>.location>.selectoption{
+    height: 90px;
+    width: 200px;
+    background: red;
+} */
+
+/* .input-box> hr{
+    height: 10px;
+    font-weight: 700;
+    color: white;
+    padding: 20px 20px;
+    
+} */
+.input-box>.search{
+    height: 100%;
+    width: 60%;
+   /* background-color: aqua; */
+   border-bottom-right-radius: 10px;
+   border-top-right-radius: 10px;
+   display:flex ;
+   justify-items: center;
+   align-items: center;
+   outline-style: none;
+   padding-left: 10px;
+}
+.input-box>.search > p{
+    font-size: larger;
+}
+.input-box>.search > input{
+    height: 70%;
+    width: 90%;
+    font-size: 12px;
+    outline-style: hidden;
+    /* background-color: red; */
+    border: unset;
+    margin-left: 10px;
+}
+
+/* ----------------- OrderCard Star---------------------- */
+.CardContainer{
+    height: 100vh;
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 15px;
+    /* background: red; */
+    align-items: center;
+}
+.CardContainer> .ordercard{
+    height: 250px;
+    width: 100%;
+    /* background: black; */
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    
+}
+.CardContainer> .ordercard> .box1{
+    height: 100%;
+    width: 32.5%;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 5px black;
+}
+.CardContainer> .ordercard> .box1> img{
+    height: 70%;
+    width: 100%;
+}
+.CardContainer> .ordercard> .box1> h1{
+    margin-left: 10px;
+    font-size: 20px;
+    color: black;
+    font-weight: 400;
+}
+.CardContainer> .ordercard> .box1> p{
+    margin-left: 10px;
+    font-size: 16px;
+    color:rgb(54, 54, 54)
+}
+.CardContainer> .ordercard> .box1:hover{
+
+    animation-name: scaleCard;
+    /* animation-duration: 3s; */
+    transform: scale(1.04);
+    transition: ease-in-out(0.3s);
+}
+
+/* --------------CollectionCard---------- */
+.CardContainer> .CollectionCard{
+    height:500px ;
+    width: 100%;
+    /* background: aqua; */
+    margin-top: 80px;
+}
+.CollectionCard > h1{
+    font-size: 35px;
+    font-weight: 400;
+    color: rgb(28, 28, 28);
+    font-family: Okra, Helvetica, sans-serif;
+    
+}
+.CollectionCard>p{
+    font-size: 18px;
+    color: grey;
+    font-family: Okra, Helvetica, sans-serif;
+    /* font-weight: 500; */
+}
+.CollectionCard> .CollectionBoxContainer{
+    height: 350px;
+    width: 100%;
+    /* background: red; */
+    margin-top: 30px;
+    display: flex;  
+    justify-content: space-evenly;
+    align-items: center;
+}
+.CollectionBoxContainer >.CollectionBox1{
+  height: 100%;
+  width: 24%;
+  background: grey;
+  border-radius: 10px;  
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+  background-image: url(https://b.zmtcdn.com/data/collections/684397cd092de6a98862220e8cc40aca_1709810183.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  
+}
+.CollectionBoxContainer >.CollectionBox1 > h1{
+    font-size: 20px;
+    margin-top: 300px;
+    margin-left: 10px;
+}
+.CollectionBoxContainer >.CollectionBox1 > p{
+    font-size: 16px;
+    margin-left: 10px;
+}
+.CollectionBoxContainer >.CollectionBox2{
+    height: 100%;
+    width: 24%;
+    background: grey;
+    border-radius: 10px;  
+    box-shadow: 0 0 10px black;
+    background-image: url(https://b.zmtcdn.com/data/collections/580b6d12d1d87fe4d2a8d0262ab4659b_1736428226.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+  .CollectionBoxContainer >.CollectionBox2 > h1{
+    font-size: 20px;
+    margin-top: 300px;
+    margin-left: 10px;
+}
+  .CollectionBoxContainer >.CollectionBox2 > p{
+    font-size: 16px;
+    margin-left: 10px;
+    
+}
+  .CollectionBoxContainer >.CollectionBox3{
+    height: 100%;
+    width: 24%;
+    background: grey;
+    border-radius: 10px;  
+    box-shadow: 0 0 10px black;
+    background-image: url( https://b.zmtcdn.com/data/collections/5fdc9918a60d2b7a4be41c1dddee5f29_1705558576.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+  .CollectionBoxContainer >.CollectionBox3 > h1{
+    font-size: 20px;
+    margin-top: 300px;
+    margin-left: 10px;
+}
+  .CollectionBoxContainer >.CollectionBox3 > p{
+    font-size: 16px;
+    margin-left: 10px;
+    
+}
+  .CollectionBoxContainer >.CollectionBox4{
+    height: 100%;
+    width: 24%;
+    background: grey;
+    border-radius: 10px;  
+    box-shadow: 0 0 10px black;
+    background-image: url(https://b.zmtcdn.com/data/collections/5cbe9bc87c9da2c6954772540d2e5db5_1730709895.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+  .CollectionBoxContainer >.CollectionBox4 > h1{
+    font-size: 20px;
+    margin-top: 300px;
+    margin-left: 10px;
+}
+  .CollectionBoxContainer >.CollectionBox4 > p{
+    font-size: 16px;
+    margin-left: 10px;
+    
+}
+
+/* -------------------LocationContainer---------------- */
+.CardContainer >.LocationContainer{
+    height: 350px;
+    width: 100%;
+    /* background: red; */
+    margin-top: 50px;
+    outline-style: none;
+} 
+.LocationContainer > h1{
+    font-size: 35 px;
+    font-weight: 500;
+}
+.LocationContainer > span{
+    font-size: 35 px;
+    font-weight: 700;
+}
+.LocationContainer > .LocationTable{
+    height: 300px;
+    width: 100%;
+    /* background:black; */
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+}
+.LocationTable > .LocationBox{
+    height: 100%;
+    width: 32%;
+    border-radius: 10px;
+    
+    
+}
+.LocationBox > .LocationPlace1{
+    height: 30%;
+    width: 99%;
+    box-shadow: 0 0 3px black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.LocationPlace1 > h5{
+    /* border: 1px solid black; */
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+    padding-top: 10px;
+    color: RGB(28, 28, 28);
+}
+.LocationPlace1>p{
+    margin-left: 10px; 
+    color: RGB(28, 28, 28);
+    font-size: 16px;
+    /* border: 1px solid black; */
+    /* margin-top: 20px; */
+}
+.LocationBox > .LocationPlace2{
+    height: 30%;
+    width: 99%;
+    box-shadow: 0 0 3px black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LocationBox > .LocationPlace2 > h5 {
+    font-size: 20px;
+    font-weight: 300;
+    color: RGB(28, 28, 28);
+    
+    outline: none;
+}
+.LocationBox > .LocationPlace2 > select{
+    background: none;
+    font-size: 20px;
+    border: unset;
+}
+/* <!-- ----------------LocationContainer End---------------- --> */
+/* <!-- ----------------App Container Start---------------- --> */
+.AppOuterContainer{
+    height: 500px;
+    width: 100%;
+    /* background: red; */
+    margin-top: 90px;
+    /* border: 1px solid grey; */
+    /* background: lime; */
+    display: flex;
+    justify-content: center;
+}
+.AppOuterContainer> .AppInnerContainer{
+    height: 100%;
+    width: 80%;
+    /* border: 1px solid grey; */
+    /* background: grey; */
+    display: flex;
+    justify-content: center;
+}
+.AppInnerContainer>.AppBox1{
+    height: 100%;
+    width: 45%;
+    /* background: lime; */
+    background-image: url(https://b.zmtcdn.com/data/o2_assets/ce5bc038a8a2d4f8f24465c8826182af1726501431.png);
+}
+.AppBox1>img{
+    height: 100%;
+    width: 100%; 
+}
+.AppInnerContainer>.AppBox2{
+    height: 80%;
+    width: 50%;
+    /* background: lime; */
+    margin-left: 50px;
+    margin-top: 30px;
+} 
+.AppInnerContainer>.AppBox2>h2{
+    font-size: 46px;
+    font-weight: 400;
+}
+.AppInnerContainer>.AppBox2>p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.AppInnerContainer>.AppBox2>.radiobutton{
+    margin-left: 30px;
+    margin-top: 30px;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    gap: 60px;
+}
+.AppInnerContainer>.AppBox2>input{
+    margin-left: 30px;
+    margin-top: 20px;
+    height: 50px;
+    width: 250px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: unset;
+}
+.AppInnerContainer>.AppBox2>button{
+    height: 50px;
+    width: 140px;
+    background: rgb(228, 82, 82);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.AppInnerContainer>.AppBox2>p{
+    margin-top: 30px;
+    margin-left: 30px;
+    color: grey;
+    font-weight: 200;
+}
+.AppImage {
+    display: flex;
+}
+.AppImage> .AppImage1{
+    height: 40px;
+    width: 150px;
+    /* background-color: red; */
+    margin-left: 30px;
+    margin-top: 20px;
+    background-image: url(https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+.AppImage> .AppImage2{
+    height: 40px;
+    width: 150px;
+    /* background-color: red; */
+    margin-left: 30px;
+    margin-top: 20px;
+    background-image: url(https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+/* <!-- ----------------App Container End---------------- --> */
+/* <!-- ----------------Explore Container Start---------------- -->  */
+.ExploreContainer{
+    height: 450px;
+    width: 100%;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.ExploreContainer > p{
+    padding-top: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.ExploreContainer >.ExploreBox{
+    height: 70px;
+    width: 100%;
+    border-radius: 5px;
+    padding-bottom: 30px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: ;
+    box-shadow: 0 0 2px grey;
+
+}
+.ExploreBox > h5{
+    height: 60%;
+    width: 90%;
+    /* background: red; */
+    margin-top: 22px;
+    margin-left: 30px;
+    font-size: 22px;
+    font-weight: 350;
+}
+.ExploreBox > select{
+    width: 30px;
+    font-size: 22p;
+    margin-top: 22px;
+    border: unset;
+    background: none;
+}
+/* <!-- ----------------Explore Container End---------------- -->  */
+/* <!-- ----------------Footer Header Container Start---------------- -->  */
+.FooterContainer{
+    height: 420px;
+    width: 100%;
+    /* background: lime; */
+    margin-top: 40px;
+    padding-top: 40px;
+    background: rgb(248, 248, 248);
+}
+.FooterContainer > .HeaderFooter{
+    height: 40px;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.HeaderFooter> .zomato-image{
+    display: flex;
+}
+.HeaderFooter> .zomato-image>img{
+    height: 30px;
+}
+.zomato-image >.Country{
+    height: 40px;
+    width: 20%;
+    /* background: black; */
+    margin-left: 720px;
+    display: flex;
+    justify-content: space-between;
+}
+.Country > .CountryBox{
+    height: 80%;
+    width: 48%;
+    box-shadow: 0 0 2px black;
+    padding-top: 4px;
+    padding-left: 5px;
+    /* background: red; */
+}
+.CountryBox > span{
+    font-size: 16px;
+}
+.CountryBox > select{
+    border: unset;
+    background: none;
+}
+/* <!-- ----------------Footer Header Container End---------------- -->  */
+/* <!-- ----------------Footer Info Container Start---------------- -->  */
+.FooterContainer > .FooterInfo{
+    height: 250px;
+    width: 100%;
+    /* background: red; */
+    margin-top: 25px;
+    display: flex;
+}
+.FooterInfo > .InfoBox1{
+    height: 100%;
+    width: 20%;
+    /* background: lightgreen; */
+}
+.FooterInfo > .InfoBox2{
+    height: 100%;
+    width: 24%;
+    /* background: lime; */
+}
+.FooterInfo > .InfoBox3{
+    height: 100%;
+    width: 18%;
+    /* background: lightgreen; */
+}
+.FooterInfo > .InfoBox4{
+    height: 100%;
+    width: 18%;
+    /* background: lightgreen; */
+}
+.InfoBox1> h6{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.InfoBox1>p{
+    font-size: 14px;
+    color: rgb(110, 93, 93);
+    margin-top: 5px;
+    font-weight: 300;
+}
+.InfoBox2> h6{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.InfoBox2 ,p{
+    font-size: 14px;
+    color: rgb(110, 93, 93);
+    margin-top: 5px;
+    font-weight: 300;
+}
+.InfoBox3> h6{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.InfoBox3 ,p{
+    font-size: 14px;
+    color: rgb(110, 93, 93);
+    margin-top: 5px;
+    font-weight: 300;
+}
+.InfoBox4> h6{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.InfoBox4>.SocialLogo{
+    display: flex;
+}
+.SocialLogo > .LogoImage{
+    border-radius: 50%;
+}
+.InfoBox4 > .AppStore{
+    height: 40px;
+    width: 120px;
+    background-image: url("https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-top: 10px;
+   
+}
+.InfoBox4 > .GooglePlay{
+    height: 40px;
+    width: 120px;
+    background-image: url("https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-top: 10px;  
+}
+.FooterInfo > hr{
+    font-weight: 300;
+    color: grey;
+}
+.FooterInfo > p{
+    padding: 20px;
+    font-size: 14px;
+    
+}
+/* <!-- ----------------Footer Info Container End---------------- -->  */
